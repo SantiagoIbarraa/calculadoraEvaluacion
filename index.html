@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Título que aparecerá en la pestaña del navegador -->
+  <title>Calculadora</title>
+  <!-- Enlace al archivo CSS externo para los estilos de la calculadora -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <!-- Contenedor principal que engloba toda la calculadora -->
+  <div class="container">
+    <!-- Título principal de la aplicación -->
+    <h1>Calculadora</h1>
+    <!-- Contenedor específico para la calculadora -->
+    <div class="calculator">
+      <!-- Sección de la pantalla donde se muestran los datos y resultados -->
+      <div class="display">
+        <!-- Campo de entrada deshabilitado para mostrar la operación y el resultado -->
+        <!-- El atributo "disabled" impide que el usuario escriba directamente en él -->
+        <input type="text" id="result" disabled>
+      </div>
+      <!-- Contenedor para todos los botones de la calculadora -->
+      <div class="buttons">
+        <!-- Botones numéricos del 7 al 9 -->
+        <!-- Cada botón llama a la función "calculate" con el valor correspondiente -->
+        <button onclick="calculate('7')">7</button>
+        <button onclick="calculate('8')">8</button>
+        <button onclick="calculate('9')">9</button>
+        <!-- Botón de división con clase "operador" para estilizarlo diferente -->
+        <button onclick="calculate('/')" class="operador">/</button>
+        
+        <!-- Botones numéricos del 4 al 6 -->
+        <button onclick="calculate('4')">4</button>
+        <button onclick="calculate('5')">5</button>
+        <button onclick="calculate('6')">6</button>
+        <!-- Botón de multiplicación -->
+        <button onclick="calculate('*')" class="operador">*</button>
+        
+        <!-- Botones numéricos del 1 al 3 -->
+        <button onclick="calculate('1')">1</button>
+        <button onclick="calculate('2')">2</button>
+        <button onclick="calculate('3')">3</button>
+        <!-- Botón de resta -->
+        <button onclick="calculate('-')" class="operador">-</button>
+        
+        <!-- Botón para el cero y el punto decimal -->
+        <button onclick="calculate('0')">0</button>
+        <button onclick="calculate('.')">.</button>
+        <!-- Botón de suma -->
+        <button onclick="calculate('+')" class="operador">+</button>
+        
+        <!-- Botón para limpiar la pantalla/borrar -->
+        <button onclick="calculate('clear')">C</button>
+        
+        <!-- Botón de porcentaje -->
+        <button onclick="calculate('%')" class="porcentaje">%</button>
+        
+        <!-- Botones para funciones matemáticas avanzadas -->
+        <!-- Raíz cuadrada -->
+        <button onclick="calculate('sqrt')" class="funcion">√</button>
+        <!-- Elevar al cuadrado -->
+        <button onclick="calculate('square')" class="funcion">x²</button>
+        <!-- Funciones trigonométricas -->
+        <button onclick="calculate('sin')" class="funcion">sin</button>
+        <button onclick="calculate('cos')" class="funcion">cos</button>
+        <button onclick="calculate('tan')" class="funcion">tan</button>
+        <!-- Elevar al cubo -->
+        <button onclick="calculate('pow3')" class="funcion">x³</button>  
+        <!-- Logaritmo en base 10 -->
+        <button onclick="calculate('log10')" class="funcion">log</button> 
+        
+        <!-- Botón para calcular el resultado final -->
+        <button onclick="calculate('calculate')" class="igual">=</button>
+      </div>
+    </div>
+  </div>
+  <!-- Enlace al archivo JavaScript externo que implementa la funcionalidad de la calculadora -->
+  <script src="script.js"></script>
+</body>
+</html>
